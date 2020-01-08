@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>メンタコスメ２周目_２</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+
+    <!-- jQuery.jsの読み込み -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <!-- drawer.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+  <!-- jquery & iScroll -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <!-- drawer.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- スムーズスクロール部分の記述 -->
+    <script>
+    $(function(){
+       // #で始まるアンカーをクリックした場合に処理
+       $('a[href^=#]').click(function() {
+          // スクロールの速度
+          var speed = 400; // ミリ秒
+          // アンカーの値取得
+          var href= $(this).attr("href");
+          // 移動先を取得
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          // 移動先を数値で取得
+          var position = target.offset().top;
+          // スムーススクロール
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+       });
+    });
+    </script>
+  </head>
+      <body class="drawer drawer--right body">
+        <div class="header-wrapper">
+        <header class="drawer-navbar header" role="banner">
+          <div class="drawer-container">
+            <div class="drawer-navbar-header">
+              <div class="drawer-brand logo">
+                <p class="logo-title">LogoLOGO</p>
+                <p class="logo-info">コスメです。</p>
+              </div>
+              <button type="button" class="drawer-toggle drawer-hamburger">
+                <span class="sr-only">toggle navigation</span>
+                <span class="drawer-hamburger-icon"></span>
+              </button>
+            </div>
+            <nav class="drawer-nav" role="navigation">
+              <ul class="drawer-menu drawer-menu--right">
+                <li><a class="drawer-menu-item" href="#about-page">About</a></li>
+                <li><a class="drawer-menu-item" href="#stuff-page">Stuff</a></li>
+                <li><a class="drawer-menu-item" href="#menu-page">Menu</a></li>
+                <li><a class="drawer-menu-item" href="#blog-page">Blog</a></li>
+                <li><a class="drawer-menu-item" href="#access-page">Access</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+      <div class="site-title-wrapper">
+        <h1 class="site-title">Awesome<br>Cosmetic</h1>
+        <p class="site-title-sub">サブタイトルサブタイトルサブタイトルサブタイトルサブタイトルサブタイトル</p>
+      </div>
+      <a href="#about-page" class="arrow-down">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
+    <main class="main">
+      <section class="about" id="about-page">
+        <div class="about-left">
+          <div class="part">
+            <h2>About</h2>
+            <p>こだわり</p>
+          </div>
+          <div class="about-left-text">
+            <h3>コスメについて</h3>
+            <p>私たちのこだわり私たちのこだわり私たちのこだわり私たちのこだわり私たちのこだわり私たちのこだわり私たちのこだわり私たちのこだわり私たちのこだわり私たちの</p>
+          </div>
+        </div>
+        <div class="about-right">
+          <img src="img/about-image.png" class="about-right">
+        </div>
+      </section>
+      <section class="item-wrapper" id="stuff-page">
+        <div class="part">
+          <h2>Item</h2>
+          <p>アイテム</p>
+        </div>
+        <ul class="items">
+          <li class="item">
+            <img src="img/item-image.png" class="item-image">
+            <p class="item-list">ファンデーション</p>
+            <dl class="item-info">
+              <dt>コスメ１</dt>
+              <dd>商品について</dd>
+            </dl>
+          </li>
+          <li class="item">
+            <img src="img/item-image.png" class="item-image">
+            <p class="item-list">リップ</p>
+            <dl class="item-info">
+              <dt>コスメ2コスメ2コスメ2コスメ2コスメ2</dt>
+              <dd>商品について商品について商品について商品について商品について商品について</dd>
+            </dl>
+          </li>
+          <li class="item">
+            <img src="img/item-image.png" class="item-image">
+            <p class="item-list">アシスタント</p>
+            <dl class="item-info">
+              <dt>コスメ3コスメ3コスメ3コス</dt>
+              <dd class="item3p">真ん中真ん中真ん中真ん中真ん中真ん中</dd>
+            </dl>
+          </li>
+        </ul>
+      </section>
+      <section class="price" id="menu-page">
+        <div class="price-left">
+          <div class="part">
+            <h2>price</h2>
+            <p>料金表</p>
+          </div>
+          <table class="price-table">
+            <tr>
+              <th>アイライナー</th>
+              <td>¥3,000</td>
+            </tr>
+            <tr>
+              <th>リップ</th>
+              <td>¥3,000</td>
+            </tr>
+            <tr>
+              <th>グロス</th>
+              <td>¥3,000</td>
+            </tr>
+            <tr>
+              <th>シャドウ</th>
+              <td>¥3,000</td>
+            </tr>
+            <tr>
+              <th>マニキュア</th>
+              <td>¥3,000</td>
+            </tr>
+          </table>
+        </div>
+
+      </section>
+      <section class="blog-wrapper" id="blog-page">
+        <div class="part">
+          <h2>Blog</h2>
+          <p>ブログ</p>
+        </div>
+        <ul class="blogs">
+              <li class="blog">
+                <image src="img/blog1.png" class="blog-image"></image>
+                <time class="blog-time">2019/12/3</time>
+                <p class="blog-title">１月の営業日ご案内。</p>
+              </li>
+              <li class="blog">
+                <image src="img/blog2.png" class="blog-image"></image>
+                <time class="blog-time">2019/11/3</time>
+                <p class="blog-title">１２月の営業日ご案内。</p>
+              </li>
+              <li class="blog">
+                <image src="img/blog3.png" class="blog-image"></image>
+                <time class="blog-time">2019/11/2</time>
+                <p class="blog-title">メイク始めました。</p>
+              </li>
+              <li class="blog">
+                <image src="img/blog3.png" class="blog-image"></image>
+                <time class="blog-time">2019/11/2</time>
+                <p class="blog-title">メイク始めました。</p>
+              </li>
+            </ul>
+      </section>
+      <section class="access-wrapper" id="access-page">
+        <div class="part">
+          <h2>Access</h2>
+          <p>アクセス</p>
+        </div>
+        <div class="access">
+          <address class="access-root">
+            <dl class="root">
+            <dt class="root-title">ADRESS</dt>
+            <dd class="root-info">大阪市北区芝田一丁目</dd>
+            <dt class="root-title">TELL</dt>
+            <dd class="root-info">000-0000-0000</dd>
+            <dt class="root-title">ON TIME</dt>
+            <dd class="root-info">平日</dd>
+            <dt class="root-title">OFF TIME</dt>
+            <dd class="root-info">土曜日祝日</dd>
+            </dl>
+          </address>
+          <p class="sma-map">行き方の説明</p>
+          <figure class="access-map">
+            <iframe class="access-map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9013.251243230176!2d135.4938356192173!3d34.7061796495281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e691c5c21a61%3A0x426587edd82ea9dc!2z44CSNTMwLTAwMTIg5aSn6Ziq5bqc5aSn6Ziq5biC5YyX5Yy66Iqd55Sw77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1575177557092!5m2!1sja!2sjp"
+            frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          </figure>
+        </div>
+        <div class="access-description">
+          <h3>道順の説明</h3>
+          <ol>
+            <li>
+              ①行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明
+            </li>
+            <li>
+              ②行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明
+            </li>
+            <li>
+              ③行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明行き方の説明
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <h1 class="footer-logo">LOGOLOGo</h1>
+    </footer>
+
+<!-- ページトップ -->
+  <p class="pagetop">
+    <a href="#wrap">
+      ▲
+    </a>
+  </p>
+  <script>
+  // トップページへ戻る
+  $(document).ready(function() {
+    var pagetop = $('.pagetop');
+      $(window).scroll(function () {
+         if ($(this).scrollTop() > 100) {
+              pagetop.fadeIn();
+         } else {
+              pagetop.fadeOut();
+              }
+         });
+         pagetop.click(function () {
+             $('body, html').animate({ scrollTop: 0 }, 500);
+                return false;
+     });
+  });
+  </script>
+  <!-- ドロワーメニューの利用宣言 -->
+  <script>
+  $(document).ready(function() {
+    $('.drawer').drawer();
+  });
+  </script>
+  </body>
+</html>
